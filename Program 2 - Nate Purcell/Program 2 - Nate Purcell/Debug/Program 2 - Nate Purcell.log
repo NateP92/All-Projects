@@ -1,0 +1,3 @@
+﻿  Program 2 - Nate Purcell.cpp
+A:\Coding_Projects\All-Projects\Program 2 - Nate Purcell\Program 2 - Nate Purcell\Program 2 - Nate Purcell.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Program 2 - Nate Purcell.vcxproj -> A:\Coding_Projects\All-Projects\Program 2 - Nate Purcell\Debug\Program 2 - Nate Purcell.exe
