@@ -71,7 +71,11 @@ int main()
 			cout << "Thank you for playing the Sorry Board Game!" << endl;
 			return 0;
 		}
-		
+	roundCounter = 1;
+	player1steps = 0;
+	player2steps = 0;
+	bool player1onStart = true;
+	bool player2onStart = true;
 	}
 		
 	return 0;
@@ -80,8 +84,9 @@ int main()
 //Functions
 //(1) GenerateCardNumber() will generate a random number between 1 and 12
 //		- Takes an int and returns an int
-//(2) A function to play a round would be helpful
+//(2) PlayRound() will play one round for one player but can see the opponent's points in case they need to swap
 //		- Changes the number of points the player gets
+//		- Takes a bool to know whether or not the player is one base
 //		- Knows which player is playing from playerNumber var
 //		- Calls function to generate a card number
 //		- Uses nested if/else statements to determime how to proceed if the player is on start or off start
@@ -96,10 +101,8 @@ int GenerateCardNumber()
 
 void PlayRound(int& currentSteps, int& opponentSteps, int playerNumber, bool& onStart)
 {
-	int newSteps = 0;
 	int cardNumber;
 	int playerChoice = 0;
-	int tempSteps;
 	
 	//Generate random number betweeen 1 & 12 for cardNumber var
 	cardNumber = GenerateCardNumber();
@@ -150,15 +153,21 @@ void PlayRound(int& currentSteps, int& opponentSteps, int playerNumber, bool& on
 		//Adding steps or swapping steps
 		if (playerChoice == 1)
 		{
+			if ((currentSteps + cardNumber) + cardNumber) //Just in case they try to go over 30 here
+			{
+				cout << "Oops! You need exactly 30 points to win! Try again!" << endl;
+				cout << "Total steps for Player " << playerNumber << ": " << currentSteps << endl;
+				return;
+			}
 			currentSteps += cardNumber;
 			cout << "You can move 4 more steps!" << endl;
 			cout << "Total steps for Player " << playerNumber << ": " << currentSteps << endl;
+			return;
 		}
 		else 
 		{
-			tempSteps = opponentSteps;
-			opponentSteps = currentSteps;
-			currentSteps = tempSteps;
+			currentSteps = opponentSteps;
+			opponentSteps = 0;
 			cout << "Total steps for Player " << playerNumber << ": " << currentSteps << endl;
 		}
 		return;
