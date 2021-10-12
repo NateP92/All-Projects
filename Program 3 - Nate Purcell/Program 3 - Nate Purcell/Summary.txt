@@ -1,0 +1,14 @@
+E              laptop          Quantity: 5          price/piece:        1200            Total: $6000
+E          flashdrive          Quantity: 500          price/piece:        7.5            Total: $3750
+E     portablecharger          Quantity: 40          price/piece:        32            Total: $1280
+E              heater          Quantity: 35          price/piece:        58            Total: $2030
+--------------------------------------------------------
+Total Price for Electronics in Inventory: $ 13060
+--------------------------------------------------------
+O            staplers          Quantity: 100          price/piece:        6            Total: $600
+O              binder          Quantity: 250          price/piece:        5.15            Total: $1287.5
+O        computerdesk          Quantity: 10          price/piece:        189            Total: $1890
+O             deskmat          Quantity: 150          price/piece:        33            Total: $4950
+--------------------------------------------------------
+Total Price for Office Supplies in Inventory: $ 8727.5
+--------------------------------------------------------

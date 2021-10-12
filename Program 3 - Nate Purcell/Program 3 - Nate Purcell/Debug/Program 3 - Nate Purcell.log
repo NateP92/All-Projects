@@ -1,6 +1,8 @@
 ﻿  Source.cpp
-A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(12,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(16,6): warning C4101: 'numItems': unreferenced local variable
-A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(18,9): warning C4101: 'itemPrice': unreferenced local variable
-A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(15,7): warning C4101: 'supplyType': unreferenced local variable
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(66,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(79,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(103,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(131,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(151,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\Source.cpp(174,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
   Program 3 - Nate Purcell.vcxproj -> A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Debug\Program 3 - Nate Purcell.exe
