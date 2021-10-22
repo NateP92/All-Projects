@@ -47,10 +47,10 @@ void InputData(vector<char>& itemType, vector<int>& numItems, vector<string>& of
 	}
 	fin.close();
 
-	itemType.pop_back();
-	numItems.pop_back();
-	officeItem.pop_back();
-	itemPrice.pop_back();
+	//itemType.pop_back();
+	//numItems.pop_back();
+	//officeItem.pop_back();
+	//itemPrice.pop_back();
 
 	return;
 }
