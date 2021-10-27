@@ -1,0 +1,7 @@
+﻿  DoTheWork.cpp
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\DoTheWork.cpp(61,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\DoTheWork.cpp(74,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\DoTheWork.cpp(98,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\DoTheWork.cpp(126,20): warning C4018: '<': signed/unsigned mismatch
+A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Program 3 - Nate Purcell\DoTheWork.cpp(146,20): warning C4018: '<': signed/unsigned mismatch
+  Program 3 - Nate Purcell.vcxproj -> A:\Coding_Projects\All-Projects\Program 3 - Nate Purcell\Debug\Program 3 - Nate Purcell.exe
