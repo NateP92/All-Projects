@@ -14,13 +14,13 @@ public:
 	Student(string first, string last, float quiz1score, float quiz2score, float quiz3score, float quiz4score, float exam1score, float exam2score, float finalProject);
 	string getFirstName();
 	string getLastName();
-	void getQuizScores();
-	void getExamScores();
-	float getFinalProjectScore();
-	bool AcquireData(ifstream& fin);
-	bool PrintData(ostream& out);
+	void getQuizScores(); //used to test if the data was being taken from the file properly
+	void getExamScores(); //used to test if the data was being taken from the file properly
+	float getFinalProjectScore(); //used to test if data was being taken from file properly
+	bool AcquireData(ifstream& fin); 
+	bool PrintData(ostream& cout);
 	float CourseAverage();
-	bool DisplayCourseAverage();
+	bool DisplayCourseAverage(ostream& cout);
 	string LetterGrade();
 private:
 	string firstName;
@@ -34,6 +34,6 @@ private:
 	float finalProjectScore;
 };
 
+void InsertionSortVector(vector<Student>& studentList);
 
-void TakeData(vector<Student>& studentList);
 #endif

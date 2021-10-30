@@ -1,2 +1,6 @@
-﻿  Student.cpp
+﻿  Main.cpp
+  Student.cpp
+C:\Users\gamer\Desktop\Computer Science Learning Library\All-Projects\Project4\Project4\Student.cpp(112,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\gamer\Desktop\Computer Science Learning Library\All-Projects\Project4\Project4\Student.cpp(198,20): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Project4.vcxproj -> C:\Users\gamer\Desktop\Computer Science Learning Library\All-Projects\Project4\Debug\Project4.exe

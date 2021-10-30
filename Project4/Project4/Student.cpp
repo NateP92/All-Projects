@@ -2,7 +2,8 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <fstream> 
+#include <fstream>
+#include <iomanip>
 using namespace std;
 //Default constructor
 Student::Student()
@@ -85,57 +86,125 @@ bool Student::AcquireData(ifstream& fin)
 	}
 }
 
-bool Student::PrintData(ostream& out) 
+bool Student::PrintData(ostream& cout) 
 {
-	return true;
-
+	cout << left;
+	cout << setw(20) << getFirstName();
+	cout << setw(20) << getLastName();
+	cout << setw(10) << DisplayCourseAverage(cout);
+	cout << setw(5) << LetterGrade() << endl;
+	if (cout.good() == true)
+	{
+		return true;
+	}
+	else { return false; }
 }
 
 //Calculates the student object's avg
-float Student::CourseAverage()                                                       //FIX ME: ALL OF THESE FUNCTIONS ARE INCOMPLETE
+float Student::CourseAverage()                                                       
 {
-	float courseAvg = 0;
+	float courseAvg;
+	float quizAvg;
+	float examAvg;
+
+	quizAvg = ((quiz1 + quiz2 + quiz3 + quiz4) / 40) * 100;
+	examAvg = ((exam1 + exam2) / 200) * 100;
+	courseAvg = ((quizAvg * .35) + (examAvg * .35) + (finalProjectScore * .3));
 	return courseAvg;
 }
-bool Student::DisplayCourseAverage()
+bool Student::DisplayCourseAverage (ostream& cout)
 {
-	return true;
+	float courseAverage = CourseAverage();
+	
+	cout << fixed << setprecision(1) << courseAverage;
+
+	if (cout.good() == true)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
 }
-string Student::LetterGrade()
+
+string Student::LetterGrade()																	//FIX ME: ALL OF THE BELOW FUNCTIONS ARE INCOMPLETE
 {
 	string letterGrade;
-	return letterGrade;
+	float courseAvg = CourseAverage();
+	if (courseAvg >= 93)
+	{
+		letterGrade = "A";
+	}
+	else if (courseAvg >= 90 && courseAvg < 94)
+	{
+		letterGrade = "A-";
+	}
+	else if (courseAvg >= 87 && courseAvg < 90)
+	{
+		letterGrade = "B+";
+	}
+	else if (courseAvg >= 83 && courseAvg < 87)
+	{
+		letterGrade = "B";
+	}
+	else if (courseAvg >= 80 && courseAvg < 83)
+	{
+		letterGrade = "B-";
+	}
+	else if (courseAvg >= 77 && courseAvg < 80)
+	{
+		letterGrade = "C+";
+	}
+	else if (courseAvg >= 73 && courseAvg < 77)
+	{
+		letterGrade = "C";
+	}
+	else if (courseAvg >= 70 && courseAvg < 73)
+	{
+		letterGrade = "C-";
+	}
+	else if (courseAvg >= 67 && courseAvg < 70)
+	{
+		letterGrade = "D+";
+	}
+	else if (courseAvg >= 63 && courseAvg < 67)
+	{
+		letterGrade = "D";
+	}
+	else if (courseAvg >= 60 && courseAvg < 63)
+	{
+		letterGrade = "D-";
+	}
+	else if (courseAvg < 60)
+	{
+		letterGrade = "F";
+	}
+		return letterGrade;
 }
 
-void TakeData(vector<Student>& studentList)
+bool operator>(Student lhs, Student rhs)
 {
-	ifstream fin;
-	fin.open("Program4Data.txt");
-	int randomNum;
-	string first;
-	string last;
-	float quiz1score;
-	float quiz2score;
-	float quiz3score;
-	float quiz4score;
-	float exam1score;
-	float exam2score;
-	float finalProject;
+	float lhs_num = (lhs.CourseAverage());
+	float rhs_num = (rhs.CourseAverage());
+	return lhs_num > rhs_num;
+}
 
-	fin >> randomNum;
-	while (fin.good())
+
+void InsertionSortVector(vector<Student>& studentList)
+{
+	Student tempVal;
+	int j;
+	for (int i = 1; i < studentList.size(); i++)
 	{
-		fin >> first;
-		fin >> last;
-		fin >> quiz1score;
-		fin >> quiz2score;
-		fin >> quiz3score;
-		fin >> quiz4score;
-		fin >> exam1score;
-		fin >> exam2score;
-		fin >> finalProject;
-
-		Student tempStudent(first, last, quiz1score, quiz2score, quiz3score, quiz4score, exam1score, exam2score, finalProject);
-		studentList.push_back(tempStudent);
+		j = i;
+		while (j > 0 && studentList.at(j) > studentList.at(j - 1))
+		{
+			tempVal = studentList.at(j);
+			studentList.at(j) = studentList.at(j - 1);
+			studentList.at(j - 1) = tempVal;
+			--j;
+		}
 	}
+	return;
 }
