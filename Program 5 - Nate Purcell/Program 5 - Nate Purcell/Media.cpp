@@ -8,15 +8,16 @@ using namespace std;
 istream& Media::ReadData(istream& input)
 {
 	input >> identifier;
+	input.ignore();
 	getline(input, accountName);
 	input >> timeInSeconds;
 	return input;
 }
 ostream& Media::WriteData(ostream& output)
 {
-	output << "ID is " << identifier << endl;
-	output << "Account name is " << accountName << endl;
-	output << "Time is " << timeInSeconds << endl;
+	output << identifier << endl;
+	output << accountName << endl;
+	output << timeInSeconds << endl;
 	return output;
 }
 
@@ -29,36 +30,37 @@ Video::Video()
 	formatDescriptor = "";
 	specification = "";
 }
-
 Video::Video(string newResolution, string newFormatDescriptor, string newSpecification) 
 {
 	resolution = newResolution;
 	formatDescriptor = newFormatDescriptor;
 	specification = newSpecification;
 }
-
 string Video::getType() const
 {
 	return "Video";
 }
-
 istream& Video::ReadData(istream& input)
 {
 	input >> identifier;
+	input.ignore();
 	getline(input, accountName);
 	input >> timeInSeconds;
-	getline(input,resolution);
-	getline(input, formatDescriptor);
-	getline(input,specification);
+	input >> resolution;
+	input >> formatDescriptor;
+	input.ignore();
+	getline(input, specification);
 	return input;
 }
-
 ostream& Video::WriteData(ostream& output)
 {
-	WriteData(output);
-	output << "Resolution is " << resolution;
-	output << "Format descriptor is " << formatDescriptor;
-	output << "Specification is " << specification;
+	output << identifier << endl;
+	output << accountName << endl;
+	output << timeInSeconds << endl;
+	output << resolution << endl;
+	output << formatDescriptor << endl;
+	output << specification << endl;
+	output << "*****************************" << endl;
 	return output;
 }
 
@@ -75,23 +77,29 @@ Audio::Audio(string newDescriptor, string newSpecification)
 	descriptor = newDescriptor;
 	specification = newSpecification;
 }
-
 string Audio::getType() const
 {
 	return "Audio";
 }
-
 istream& Audio::ReadData(istream& input)
 {
-	ReadData(input);
+	input >> identifier;
+	input.ignore();
+	getline(input, accountName);
+	input >> timeInSeconds;
 	input >> descriptor;
-	input >> specification;
+	input.ignore();
+	getline(input, specification);
 	return input;
 }
 ostream& Audio::WriteData(ostream& output)
 {
-	WriteData(output);
-	output << descriptor;
-	output << specification;
+	output << identifier << endl;
+	output << accountName << endl;
+	output << timeInSeconds << endl;
+	output << descriptor << endl;
+	output << specification << endl;
+	output << "*****************************" << endl;
 	return output;
 }
+

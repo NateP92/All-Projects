@@ -25,7 +25,7 @@ protected:
 	int timeInSeconds;
 };
 
-class Video : public Media
+class Video: public Media
 {
 private:
 	string resolution;
@@ -42,7 +42,7 @@ public:
 	ostream& WriteData(ostream& output);
 };
 
-class Audio : public Media
+class Audio: public Media
 {
 private:
 	string descriptor;
@@ -50,6 +50,8 @@ private:
 public:
 	Audio();
 	Audio(string newDescriptor, string newSpecification);
+	string getDescriptor() { return descriptor; }
+	string getSpecification() { return specification;  }
 	string getType() const override;
 	istream& ReadData(istream& input);
 	ostream& WriteData(ostream& output);
