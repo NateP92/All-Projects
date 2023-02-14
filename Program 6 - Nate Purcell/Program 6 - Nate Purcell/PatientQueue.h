@@ -1,20 +1,30 @@
-#pragma once
 //Program 6 | Nate Purcell | CS 201-R | Due: 11 Dec 21
+#pragma once
+#ifndef PATIENTQUEUE_H
+#define PATIENTQUEUE_H
 #include <iostream>
 #include <string>
 using namespace std;
 
-#ifndef PATIENTQUEUE_H
-#define PATIENTQUEUE_H
+struct Patient {
+	string firstName;
+	string lastName;
+	int SSN;
+	Patient* next;
+};
 
-void AddPatient();
+Patient* AddPatient(Patient* head, int& ctr);
 
-void AddCriticallyIll();
+Patient* AddCriticallyIll(Patient* head, int& ctr);
 
-void PopPatient();
+Patient* PopPatient(Patient* head, int& ctr);
 
-void CancelPatient();
+Patient* CancelPatient(Patient* head, int& ctr);
 
-void ListPatients();
+void ListPatients(Patient* head);
+
+int MainMenu();
+
+Patient* ClinicMenu(string clinic, Patient* head, int& ctr);
 
 #endif

@@ -4,32 +4,35 @@
 #include "PatientQueue.h"
 using namespace std;
 
-struct Patient {
-	string firstName;
-	string lastName;
-	int SSN;
-	Patient* next;
-};
+Patient* HeartClinic = NULL;
+Patient* LungClinic = NULL;
+Patient* PlasticSurgery = NULL;
+int heartClinicCtr = 0;
+int lungClinicCtr = 0;
+int plasticSurgeryCtr = 0;
+
 
 int main() {
-	Patient* head;
-	head = new Patient();
-	head->next = NULL;
-	head->firstName = "Sally";
-	head->lastName = "Thompson";
-	head->SSN = 123456789;
-
-	Patient* p1 = new Patient();
-	head->next = p1;
-	p1->firstName = "Naddy";
-	p1->lastName = "Darnell";
-	p1->next = NULL;
-
-	cout << "first name of node after head is : " << head->next->firstName << endl;
-	//cout << "first name is : " << head->firstName << endl;
-	//cout << "last name is : " << head->lastName << endl;
-	//cout << "SSN is : " << head->SSN << endl;
-
-
+	int menuItem = MainMenu();		//Main Menu will be opened, then a clinic is chosen until
+	while (menuItem != 4)			//the user decides to exit
+	{
+		cout << endl;
+		switch (menuItem)
+		{
+		case 1:
+			HeartClinic = ClinicMenu("Heart Clinic", HeartClinic, heartClinicCtr);
+			break;
+		case 2:
+			LungClinic = ClinicMenu("Lung Clinic", LungClinic, lungClinicCtr);
+			break;
+		case 3:
+			PlasticSurgery = ClinicMenu("Plastic Surgery", PlasticSurgery, plasticSurgeryCtr);
+			break;
+		case 4:
+			cout << "Exiting program..";
+			return 0;
+		}
+		menuItem = MainMenu();
+	}
 	return 0;
 }
