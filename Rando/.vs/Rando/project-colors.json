@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "32f86db0-1455-4797-a494-8a8b4148c97c": {
+      "ProjectGuid": "32f86db0-1455-4797-a494-8a8b4148c97c",
+      "DisplayName": "Rando",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

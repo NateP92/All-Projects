@@ -1,0 +1,3 @@
+﻿  Rando.cpp
+A:\Coding_Projects\All-Projects\Rando\Rando\Rando.cpp(58,47): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Rando.vcxproj -> A:\Coding_Projects\All-Projects\Rando\x64\Debug\Rando.exe

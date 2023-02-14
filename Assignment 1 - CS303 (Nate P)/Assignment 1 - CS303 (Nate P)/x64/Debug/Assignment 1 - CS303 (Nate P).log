@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  MyArray.cpp
+  Generating Code...
+A:\Coding_Projects\All-Projects\Assignment 1 - CS303 (Nate P)\Assignment 1 - CS303 (Nate P)\MyArray.cpp(29): warning C4715: 'doesExist': not all control paths return a value
+  Assignment 1 - CS303 (Nate P).vcxproj -> A:\Coding_Projects\All-Projects\Assignment 1 - CS303 (Nate P)\x64\Debug\Assignment 1 - CS303 (Nate P).exe

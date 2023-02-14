@@ -1,0 +1,3 @@
+﻿  Stacks N Junk.cpp
+A:\Coding_Projects\All-Projects\Stacks N Junk\Stacks N Junk\Stacks N Junk.cpp(20,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Stacks N Junk.vcxproj -> A:\Coding_Projects\All-Projects\Stacks N Junk\x64\Debug\Stacks N Junk.exe

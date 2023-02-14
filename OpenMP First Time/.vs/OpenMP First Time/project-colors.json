@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a0ac254b-da90-4393-9b8d-bd7fe12aca86": {
+      "ProjectGuid": "a0ac254b-da90-4393-9b8d-bd7fe12aca86",
+      "DisplayName": "OpenMP First Time",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
